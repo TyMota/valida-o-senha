@@ -13,17 +13,18 @@ Minimo de 8 digitos;
 
 def senha_segura(senha):
     if len(senha) < 8:
-        return False, "A sua senha deve conter mais 8 digiost"
+        return False, "A sua senha deve conter mais 8 digitos."
     
     if not re.search(r'[a-z]', senha):
         return False, "Sua senha precisa ter no mínimo 1 letra minúscula."
     
-    if not re.search(r'[A-Z]', senha)
-    return False, "Sua senha precisa ter no minimo 1 letra miuscula"
+    if not re.search(r'[A-Z]', senha):
+        return False, "Sua senha precisa ter no minimo 1 letra miuscula."
 
-    if not re.search
+    if not re.search(r'[!@#$%¨&*()_+=-]', senha):
+        return False, "Sua senha precisa ter no minimo 1 caractere especial."
 
-    return True, "Senha validad"
+    return True, "Senha valida!"
 
 
 def solicitar_senha():
